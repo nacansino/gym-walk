@@ -5,14 +5,14 @@ from string import ascii_uppercase
 from typing import Optional
 import pygame
 
-import gymnasium as gym
+import gymnasium
 from gymnasium import spaces, utils
 from gymnasium.envs.toy_text.utils import categorical_sample
 
 WEST, EAST = 0, 1
 
 
-class WalkEnv(gym.Env):
+class WalkEnv(gymnasium.Env):
     metadata = {"render_modes": [None, "human", "ansi"], "render_fps": 5}
 
     def __init__(self, n_states=7, p_stay=0.0, p_backward=0.5, render_mode=None, verbose=0):
